@@ -1,4 +1,5 @@
 .comment_container{
+  display: grid;
 
   p{
 
@@ -10,3 +11,25 @@
     border-radius: 100%;
   }
 }
+
+.avatar{
+  width: 4%;
+}
+
+.head{
+  display: flow;
+  //width: 40%;
+}
+
+.info{
+  width: 35%;
+}
+
+.like{
+  width: 20%;
+}
+
+.comment{
+  width: 50%;
+}
+
