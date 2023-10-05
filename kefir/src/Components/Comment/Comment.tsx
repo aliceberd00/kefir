@@ -1,37 +1,44 @@
 import React from "react";
 import comment from './Comment.module.css';
 import {Avatar, Checkbox} from "@mui/material";
-import {deepOrange} from "@mui/material/colors";
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+
+
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-function Comment () {
+export default function Comment() {
+
     return (
-        <div className={comment.comment_container}>
-          <div className={comment.avatar}>
-            <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
-          </div>
+        <Card sx={{ maxWidth: 345 }}>
+            <CardHeader
+                avatar={
+                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                        R
+                    </Avatar>
 
-          <div className={comment.head}>
-            <div className={comment.info}>
-             <h5>User Name</h5>
-             <p>вчера в 20:07</p>
-            </div>
+                }
+                title="Shrimp and Chorizo Paella"
+                subheader="September 14, 2016"
 
-            <div className={comment.like}>
-            <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
-            </div>
-          </div>
+                ckeckbox={
+                    <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+                }
+            />
 
-            <div className={comment.comment}>
-            <p>Эксперимент в подготовки позволяет количественный условий особенности показывает, способствует соответствующий проверки проверки финансовых обучения позволяет и играет активности нашей практика развит</p>
-            </div>
-        </div>
-    )
+            <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                    This impressive paella is a perfect party dish and a fun meal to cook
+                    together with your guests. Add 1 cup of frozen peas along with the mussels,
+                    if you like.
+                </Typography>
+            </CardContent>
+        </Card>
+    );
 }
-
-export default Comment

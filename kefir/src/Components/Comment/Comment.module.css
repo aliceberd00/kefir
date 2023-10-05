@@ -1,0 +1,30 @@
+.comment_container {
+  width: 350px;
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-areas: "l l ";
+}
+.avatar {
+  width: 10%;
+}
+
+.avatar_it {
+  width: 80px;
+  height: 80px;
+}
+
+.head {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  grid-template-areas: "l l l";
+}
+
+.comment {
+  width: 100%;
+}
+.comment p {
+  height: 5%;
+}
+
+/*# sourceMappingURL=Comment.module.css.map */
