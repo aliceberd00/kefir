@@ -7,9 +7,17 @@ export default function Colomn() {
 
     return (
         <div>
-            <Comment/>
-            <Comment/>
-            <Comment/>
+         <div className={column.comment}>
+           <Comment/>
+         </div>
+
+         <div className={column.comment}>
+           <Comment/>
+         </div>
+
+         <div className={column.comment}>
+           <Comment/>
+         </div>
         </div>
     );
 }
